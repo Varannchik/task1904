@@ -1,0 +1,115 @@
+// div{
+//     width: 200px;
+//     height: 200px; 
+// }
+// .middle{
+//     background: red;
+//     // transform: translateX(300px) translateY(300px) rotateY(45deg) rotateX(45deg);
+//     // transform: scale(0.5,1.1);   
+//     transform: skew(-30deg);
+// }    
+// .start{
+//     background: blue;
+// }   
+// .end{
+//     background: green;
+// }
+// .wrapp_middle{
+//     background: blue;
+//     width: 300px;
+//     height: 300px;
+// }
+.content{
+    
+    div{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        // border: 2px solid green;
+        margin: 0 auto;
+        position: relative;
+        background: url(../1904/photo_2019-03-26_07-40-22.jpg) no-repeat;
+        background-size: cover;
+        &:hover {
+            transform: rotateY(360deg);
+            transition: all 6s; 
+            p, h2{
+                &::before{                    
+                transform: scale(1.1);
+                transition: all 0.5s; 
+            }
+                &::after{
+                    transform: scale(1.1);
+                    transition: all 0.5s; 
+                }
+            }
+            
+                     
+            
+        }
+        
+        
+    }
+    h2{
+        color: rgb(43, 37, 95);
+        font-weight: bold;
+        &::before{
+            position: absolute;
+            content:'';
+            height: 1px;
+            width: 360px;
+            background: red;
+            transform: translateY(20px);
+            top: 10px;
+            left: 20px;
+            transform: scale(0);
+            
+        }
+        &::after{
+            position: absolute;
+            content:'';
+            width: 1px;
+            height: 360px;
+            background: red;
+            transform: translateX(20px);
+            top: 20px;
+            left: 10px; 
+            transform: scale(0);           
+        }
+        
+        
+    }
+    p{
+        color: white;
+        &::before{
+            position: absolute;
+            content:'';
+            height: 1px;
+            width: 360px;
+            background: red;
+            bottom: 10px;
+            right: 20px;
+            transform: translateY(-20px);
+            transform: scale(0);
+            
+        }
+        &::after{
+            position: absolute;
+            content:'';
+            width: 1px;
+            height: 360px;
+            background: red;
+            right: 10px;
+            bottom: 20px;
+            right: 10px;
+            transform: translateX(-20px);
+            transform: scale(0);
+            
+        }
+       
+    }
+}

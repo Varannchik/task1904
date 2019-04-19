@@ -1,0 +1,110 @@
+.content div {
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  background: url(../1904/photo_2019-03-26_07-40-22.jpg) no-repeat;
+  background-size: cover;
+}
+
+.content div:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  -webkit-transition: all 6s;
+  transition: all 6s;
+}
+
+.content div:hover p::before, .content div:hover h2::before {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content div:hover p::after, .content div:hover h2::after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content h2 {
+  color: #2b255f;
+  font-weight: bold;
+}
+
+.content h2::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 360px;
+  background: red;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  top: 10px;
+  left: 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.content h2::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 360px;
+  background: red;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  top: 20px;
+  left: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.content p {
+  color: white;
+}
+
+.content p::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 360px;
+  background: red;
+  bottom: 10px;
+  right: 20px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.content p::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 360px;
+  background: red;
+  right: 10px;
+  bottom: 20px;
+  right: 10px;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+/*# sourceMappingURL=style.css.map */
